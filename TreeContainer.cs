@@ -4,49 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Generic_Tree_Mapping__GTM_.Models
+namespace Generic_Tree_Mapping__GTM_
 {
     // A class representing a container for multiple trees.
-    internal class TreeContainer
+    internal class TreeContainer<NodeData>
     {
 
         // A list of the trees in the container.
-        private List<Tree> trees;
+        private List<Tree<NodeData>> trees;
 
         // Constructs a new tree container.
         public TreeContainer()
         {
-            this.trees = new List<Tree>();
+            trees = new List<Tree<NodeData>>();
         }
 
         // Adds a tree to the container.
-        public void addTree(Tree tree)
+        public void addTree(Tree<NodeData> tree)
         {
-            this.trees.Add(tree);
+            trees.Add(tree);
         }
 
         // Removes a tree from the container.
-        public void removeTree(Tree tree)
+        public void removeTree(Tree<NodeData> tree)
         {
-            this.trees.Remove(tree);
+            trees.Remove(tree);
         }
 
         // Returns the tree at the specified index in the container.
-        public Tree getTree(int index)
+        public Tree<NodeData> getTree(int index)
         {
-            return this.trees[index];
+            return trees[index];
         }
 
         // Returns all trees stored by the container.
-        public List<Tree> getAllTrees()
+        public List<Tree<NodeData>> getAllTrees()
         {
-            return this.trees;
+            return trees;
         }
 
         // Sets the tree at the specified index in the container.
-        public void setTree(int index, Tree tree)
+        public void setTree(int index, Tree<NodeData> tree)
         {
-            this.trees[index] = tree;
+            trees[index] = tree;
         }
 
     }
